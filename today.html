@@ -1,0 +1,223 @@
+<html>
+<head>
+<title>
+sign up or sign in
+</title>
+<meta name="application-name" content="sign in and login form">
+<meta name="author" content="Aj">
+<meta name="description" content="simple html and java script responsive form">
+<meta name="keyword" content="Form Responsibility">
+<meta name="robot" content="index">
+<meta http-equiv="refresh" content="">
+<meta name="viewport" content="width=device-width , initial-scale">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="black">
+</head>
+
+<style>
+body{
+background-image:url("image.jpg");
+ background-size:cover;
+ background-position:fixed;
+}
+
+#log{
+ width:500px;
+ height:500px;
+ margin:auto;
+ color:white;
+ margin-top:70px;
+ background-color:black;
+ opacity:0.8;
+ border-radius:15px;
+text-align:center;
+}
+
+.log_head{
+text-align:center;
+color:white;
+font-size:30px;
+}
+
+#accept{
+text-align:center;
+display:block;
+}
+
+#accept> p{
+display:block
+};
+
+</style>
+<body>
+<div id="log">
+<h2 style="padding-top:20px ;">
+<span class="log_head">
+LogIn
+</span>
+</h2>
+<br>
+<form method="post" action="#" enctype="#" id="accept" name="accept" >
+
+<p>
+<label class="gInputText" for="gmailInput" style="float:left;"><span style="font-size:20px"><em>Gmail</em><span></label>
+<br>
+<br>
+<input type="gmail" role="gmail" name="gmailInput" id="gmailInput" required alt="gmail input" title="Enter gmail in the space provided" autocomplete
+placeholder="Enter Gmail" autocorrect="on" size="33" style="height:30px;border-radius:13px; text-align:center">
+</p>
+<style>
+.gInputText{
+margin-left:120px;
+}
+
+ #gmailInput{
+	background-color:black;
+	background:transparent;
+	color:white;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+ }
+</style>
+
+<p style="margin-top:40px">
+<label class="pInputText" for="passInput" style="float:left;"><span style="font-size:20px;"><em>Password</em><span></label>
+<br>
+<br>
+<input type="password" role="password" name="passInput" id="passInput" required alt="password input" title=" Enter Password In The Space Provided" autocomplete
+ placeholder="Enter Password" autocorrect="on" minlength="7" maxlength="16" size="33" style="height:30px; border-radius:13px ; text-align:center">
+</p>
+<style>
+.pInputText{
+margin-left:120px;
+}
+
+#passInput{
+ background-color:black;
+ background:transparent;
+ color:white;
+ border-left:none;
+ border-right:none;
+ border-top:none;
+}
+</style>
+
+</form>
+
+		<p>
+		<button type="submit" role="submit" name="submitButton" id="submitButton" required for="passInput , gmailInput" form="accept" formenctype="#" formaction="#" 
+		formmethod="post" style="height:30px ; width:100px ; border-radius:12px" alt="log in button" title="Click To Login To Tour Allocated Part Of The Sever">
+		LogIn
+		</button>
+		<style>
+			#submitButton{
+				background-color:black;
+				background:transparent;
+				color:white;
+				border-top:1px solid white;
+				border-left:none;
+				border-right:none;
+				border-bottom:1px solid white;
+				margin-top:30px;
+				box-shadow: 0px 5px 4px inset #898989;
+			}
+		</style>
+		</p>
+		
+				<p>
+		<button name="more" id="more" onclick="myFunction()" style="height:30px ; width:150px ; border-radius:12px" alt="forgot button"  title=" Click For More Mption " >
+			Forgot Password
+		</button>
+		
+		<style>
+			#more{
+				background-color:black;
+				background:transparent;
+				color:white;
+				border-top:1px solid white;
+				border-left:none;
+				border-right:none;
+				border-bottom:1px solid white;
+				margin-top:20px;
+				box-shadow: 0px 5px 4px inset #898989;
+			}
+		</style>
+		
+				<style>
+			#optdisplay{
+				display:inline-flex;
+				text-align:center;
+				justify-content:center;
+				align-items:center;
+			}
+			
+			#optdisplay>#myList{
+				display:none;
+				list-style:none;
+				text-align:center;
+			}
+			
+			#optdisplay>#myList>li:first-child{
+				width:130px;
+				height:30px;
+				padding-top:7px;
+				background-color:black;
+				background:transparent;
+				color:white;
+				border-top:1px solid white;
+				border-left:none;
+				border-right:none;
+				border-bottom:1px solid white;
+				box-shadow: 0px 5px 4px inset #898989;
+				border-radius:12px;
+				margin-right:40px;
+			}
+			
+			#optdisplay>#myList>li:last-child{
+				width:130px;
+				height:30px;
+				padding-top:7px;
+				background-color:black;
+				background:transparent;
+				color:white;
+				border-top:1px solid white;
+				border-left:none;
+				border-right:none;
+				border-bottom:1px solid white;
+				box-shadow: 0px 5px 4px inset #898989;
+				border-radius:12px;
+			}
+		</style>
+				
+		</p>
+		<div id="optdisplay" name="optdisplay" style="text-align:center">
+			<ul id="myList" style="list-style:none">
+				<li>Via Phone</li>
+				<li>Via Gmail</li>
+			</ul>
+		</div>
+		
+			<script>
+		var item=document.getElementById("myList");
+		var box=document.getElementById("more");
+		box.style.borderButtom="1px solid white";
+		item.style.display="none";
+		
+		function myFunction(){
+		 if(item.style.display=="none")
+		 {
+		 item.style.display="flex";
+		 }
+		 else
+		 {
+			item.style.display="none";
+		 };
+		}
+		
+		</script>
+</div>
+</body>
+</html>
